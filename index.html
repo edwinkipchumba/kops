@@ -1,0 +1,298 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAFOPS SYSTEM</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Hidden brand</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome System</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            background-color: #f4f7fb;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fixed heading colour */
+        .welcome-heading {
+            color: blue;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+
+        /* Center the three buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .transport-btn {
+            min-width: 120px;
+            padding: 12px 25px;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* Carousel styling */
+        .carousel {
+            max-width: 900px;
+            margin: 0 auto 35px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.65);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 576px) {
+            .carousel-item img {
+                height: 280px;
+            }
+
+            .transport-btn {
+                min-width: 100px;
+                padding: 10px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Heading -->
+    <header>
+        <h1 class="welcome-heading">Welcome System</h1>
+    </header>
+
+    <main class="container">
+
+        <!-- Transport Buttons -->
+        <div class="button-container">
+            <button
+                type="button"
+                class="btn btn-primary transport-btn"
+                data-bs-target="#transportCarousel"
+                data-bs-slide-to="0"
+                aria-label="Show flights"
+            >
+                ✈ Flight
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-success transport-btn"
+                data-bs-target="#transportCarousel"
+                data-bs-slide-to="1"
+                aria-label="Show buses"
+            >
+                🚌 Bus
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-danger transport-btn"
+                data-bs-target="#transportCarousel"
+                data-bs-slide-to="2"
+                aria-label="Show cars"
+            >
+                🚗 Car
+            </button>
+        </div>
+
+        <!-- Transport Carousel -->
+        <div
+            id="transportCarousel"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+        >
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-bs-target="#transportCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Flight slide"
+                ></button>
+
+                <button
+                    type="button"
+                    data-bs-target="#transportCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Bus slide"
+                ></button>
+
+                <button
+                    type="button"
+                    data-bs-target="#transportCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="Car slide"
+                ></button>
+            </div>
+
+            <!-- Carousel Slides -->
+            <div class="carousel-inner">
+
+                <!-- Flight Slide -->
+                <div class="carousel-item active">
+                    <img
+                        src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100"
+                        alt="Passenger airplane flying in the sky"
+                    >
+
+                    <div class="carousel-caption">
+                        <h5>Flight Services</h5>
+                        <p>Discover the world through air travel.</p>
+                    </div>
+                </div>
+
+                <!-- Bus Slide -->
+                <div class="carousel-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100"
+                        alt="Passenger bus ready for travel"
+                    >
+
+                    <div class="carousel-caption">
+                        <h5>Bus Services</h5>
+                        <p>Enjoy comfortable and affordable road trips.</p>
+                    </div>
+                </div>
+
+                <!-- Car Slide -->
+                <div class="carousel-item">
+                    <img
+                        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100"
+                        alt="Modern car on display"
+                    >
+
+                    <div class="carousel-caption">
+                        <h5>Car Services</h5>
+                        <p>Travel at your own pace with private transport.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Previous Button -->
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#transportCarousel"
+                data-bs-slide="prev"
+                aria-label="Previous slide"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+            </button>
+
+            <!-- Next Button -->
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#transportCarousel"
+                data-bs-slide="next"
+                aria-label="Next slide"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+            </button>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mb-0">
+            &copy; 2026 Welcome System. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+</html>
+```
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
